@@ -4,6 +4,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import org.example.ecf4_restful.dao.EmployeeRepository;
+import org.example.ecf4_restful.dto.EmployeeDTO;
 import org.example.ecf4_restful.entity.Employee;
 
 @Path("/employees")
@@ -20,7 +21,7 @@ public class EmployeeService {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void addEmployee(Employee employee) {
+    public void addEmployee(EmployeeDTO employee) {
         employeeRepository.save(employee);
     }
 

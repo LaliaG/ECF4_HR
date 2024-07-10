@@ -15,7 +15,8 @@ public class ApplicationConfig extends Application {
     public ApplicationConfig() {
         singletons.add(new EmployeeResource());
         singletons.add(new DepartmentResource());
-        singletons.add(new JobPositionResource());
+        singletons.add(new
+                JobPositionResource());
     }
 
     @Override
